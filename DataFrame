@@ -1,0 +1,21 @@
+Creation of DataFrame
+
+dept = [("Finance",10), \
+        ("Marketing",20), \
+        ("Sales",30), \
+        ("IT",40) \
+       ]
+deptColumns = ["dept_name","dept_id"]
+deptDF = spark.createDataFrame(data=dept, schema = deptColumns)
+deptDF.show()
+
+
+Result:
++---------+-------+
+|dept_name|dept_id|
++---------+-------+
+|  Finance|     10|
+|Marketing|     20|
+|    Sales|     30|
+|       IT|     40|
++---------+-------+
